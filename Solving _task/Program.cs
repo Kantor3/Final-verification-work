@@ -14,7 +14,6 @@
 */
 using System.Text.RegularExpressions;
 
-
 internal class Program
 {
     private static void Main(string[] args)
@@ -86,12 +85,11 @@ internal class Program
         // 3. Загрузка строк текста в массив
         string[] LoadTextInArray(string text, char sep = (char)32)
         {
-            string[] arrStrings = Regex.Replace(text, @"\s{2,}", " ").Split(sep);
-            return arrStrings;
+            string[] arrStrings = Regex.Replace(text, @"\s{2,}", " ").Trim().Split(sep);
+           return arrStrings;
         }
 
 
-        // Вывод содержимого массива
         void ShowArr(dynamic[] array, string txt = "", string last_txt = "", char frame = (char)0)
         {
             if (txt.Length > 0) Console.WriteLine(txt);
