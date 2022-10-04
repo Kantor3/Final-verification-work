@@ -110,14 +110,15 @@ internal class Program
         // Основное тело программы.
         //-------------------------------------------------------------------------------------------------
         Console.WriteLine(@"Задача. На вход подается массив строк, 
-на выходе получить массив строк длиной не более N сиволов (по умолчанию - 3-х): ");
+                            на выходе получить массив строк длиной 
+                            не более N сиволов (по умолчанию - 3-х): ");
         Console.WriteLine("---");
 
-        string text = string.Empty;
-        string str_accumulator = string.Empty;
-        char sep = (char)32;
-        int minSizeText = 1;
-        int maxSizeText = 1000;
+        string  text = string.Empty;
+        string  str_accumulator = string.Empty;
+        char    sep = (char)32;
+        int     minSizeText = 1;
+        int     maxSizeText = 1000;
 
         while (true)
         {
@@ -130,11 +131,10 @@ internal class Program
             while (true)
             {
                 Console.Write(@"
-        Использовать строки: 
-        0 - для завершения;
-        1 - заданные по умолчанию; 
-        2 - ввести с клаыиатуры -> ");
-
+                                Использовать строки: 
+                                0 - для завершения;
+                                1 - заданные по умолчанию; 
+                                2 - ввести с клаыиатуры -> ");
                 inputMethod = InputNumber();
                 if (inputMethod == 0) break;
                 else if (inputMethod == 1) text = Get_DefaulText();
