@@ -89,7 +89,7 @@ internal class Program
            return arrStrings;
         }
 
-
+        // 4. Вывод содержимого массива на консоль
         void ShowArr(dynamic[] array, string txt = "", string last_txt = "", char frame = (char)0)
         {
             if (txt.Length > 0) Console.WriteLine(txt);
@@ -134,9 +134,9 @@ internal class Program
                                 1 - заданные по умолчанию; 
                                 2 - ввести с клаыиатуры -> ");
                 inputMethod = InputNumber();
-                if (inputMethod == 0) break;
-                else if (inputMethod == 1) text = Get_DefaulText();
-                else text = InputString();
+                if      (inputMethod == 0)  break;
+                else if (inputMethod == 1)  text = Get_DefaulText();
+                else                        text = InputString();
 
                 string[] arr_source = LoadTextInArray(text);
                 if (arr_source.Length == 0) continue;
